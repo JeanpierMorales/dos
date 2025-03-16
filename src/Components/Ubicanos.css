@@ -1,0 +1,98 @@
+/* Sección principal */
+.ubicanos-section {
+  font-family: "Inter", sans-serif;
+  margin: 6rem 0rem 0rem;
+}
+
+.tituloUbicanos {
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 500px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+.Dub {
+  font-weight: 700;
+  font-size: 21px;
+  font-family: "Inter", sans-serif;
+}
+
+.Tub {
+  font-size: 16px;
+  color: #222;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+/* Contenedor del mapa con posición relativa */
+.ubicanos-map-container {
+  position: relative;
+  width: 80%; /* Establece el ancho del mapa al 100% del contenedor */
+  padding-bottom: 40.25%; /* Mantiene una relación de aspecto de 16:9 */
+  border-radius: 8px; /* Ajusta a tu preferencia */
+  margin: 0 auto; /* Centra el mapa horizontalmente */
+  overflow: hidden; /* Oculta cualquier contenido desbordado */
+}
+
+/* El iframe ocupa todo el contenedor */
+.ubicanos-map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Recuadro de contacto en la esquina inferior izquierda */
+.ubicanos-contact-info {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  color: #333;
+  padding: 20px;
+  max-width: 280px;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Opción para manejar su tamaño */
+.ubicanos-contact-info.small {
+  max-width: 200px;
+}
+
+.ubicanos-contact-info.medium {
+  max-width: 280px;
+}
+
+.ubicanos-contact-info.large {
+  max-width: 360px;
+}
+
+/* Íconos sociales dentro del recuadro */
+.ubicanos-social-icons a {
+  color: #333;
+  margin-right: 10px;
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.ubicanos-social-icons a:hover {
+  color: #222; /* Efecto hover en los íconos, si deseas */
+}
+
+/* Estilos responsivos para ocultar recuadro en pantallas pequeñas */
+@media (max-width: 576px) {
+  .ubicanos-contact-info {
+    display: none;
+  }
+}

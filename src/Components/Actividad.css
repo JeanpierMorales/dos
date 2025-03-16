@@ -1,0 +1,44 @@
+/* Contenedor principal para el carrusel */
+#cardCarousel {
+  position: relative;
+  margin: auto;
+  width: 80%;
+}
+
+/* Se permite ver parte de la siguiente/anterior slide */
+.carousel-inner {
+  overflow: visible;
+}
+
+/* Contenedor de las cards en cada slide */
+.cards-container {
+  padding: 20px 0;
+}
+
+/* Estilos para cada card */
+.custom-card {
+  flex: 0 0 30%;
+  margin: 0 10px;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* Efecto de desvanecimiento para las cards */
+.carousel-item:not(.active) .custom-card {
+  opacity: 0.7;
+  transform: scale(0.95);
+}
+
+/* Botones de control personalizados */
+.carousel-control-prev,
+.carousel-control-next {
+  filter: invert(100%);
+  width: 5%;
+}
+
+/* Opcional: ajustar el tamaño de las cards según el dispositivo */
+@media (max-width: 768px) {
+  .custom-card {
+    flex: 0 0 90%;
+    margin: 0 auto;
+  }
+}

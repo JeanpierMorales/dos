@@ -1,0 +1,126 @@
+/* Sección principal */
+.datos-section {
+  background-color: #fff; /* Fondo blanco */
+  padding: 6rem 0rem 6rem 0rem; /* Ajusta según necesites */
+  font-family: "Inter", sans-serif;
+}
+
+/* Título principal: "Déjanos un mensaje" */
+.datos-title {
+  font-size: 40px;
+  margin-bottom: 1.5rem;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 500px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+/* Contenedor con borde y radio */
+.datos-container {
+  margin-top: 3rem;
+  background-color: #fff;
+  border: 1px solid #222;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1000px; /* Ajusta el ancho máximo */
+}
+
+/* Subtítulo: "Comentanos" */
+.datos-subtitle {
+  font-weight: 700;
+  font-size: 21px;
+  font-family: "Inter", sans-serif;
+  padding: 20px;
+}
+
+/* Textarea para el mensaje */
+.datos-textarea {
+  font-size: 16px;
+  color: #222;
+  border: 1px solid #222;
+  /*border-radius: 5px;*/
+  resize: none; /* Evita que se pueda cambiar el tamaño manualmente */
+  font-family: "Inter", sans-serif;
+  border-radius: 0px;
+}
+.datos-textarea:focus {
+  box-shadow: none;
+  border: 1px solid #c5c5c5;
+}
+/* Contenedor del input email y botón */
+.datos-email-container {
+  margin-top: 20px;
+  background-color: #222;
+  padding: 15px;
+  max-width: 500px;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto; /* Centra el contenedor horizontalmente */
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around; /* Añade espacio entre el input y el botón */
+}
+
+/* Input de email */
+.datos-email-input {
+  font-size: 16px;
+  color: #fff; /* Color del texto */
+  background-color: #222; /* Fondo del input */
+  border-radius: 0px;
+  border: 0px;
+  border-bottom: 1px solid #fff; /* Borde inferior */
+  padding: 10px;
+  max-width: 280px;
+  flex-grow: 1; /* Permite que el input crezca para ocupar el espacio disponible */
+  margin-right: 10px; /* Añade un margen derecho para separar del botón */
+}
+
+.datos-email-input::placeholder {
+  color: #fff; /* Color del placeholder */
+  text-align: center;
+}
+
+/* Botón "Notifícame" */
+.datos-btn {
+  font-size: 16px;
+  color: #222;
+  background-color: #ffffff; /* Fondo negro */
+  border: none;
+  border-radius: 10px;
+  padding: 5px 30px;
+  transition: background-color 0.3s ease;
+}
+
+.datos-btn:hover {
+  font-weight: 500;
+  background-color: #fff;
+  transition: 0.15s linear;
+  box-shadow: 0px 0px 8px #5fcdd1; /* Sombra sutil */
+}
+
+.datos-email-input:focus {
+  box-shadow: none;
+  background-color: #222;
+  color: #fff;
+  border: 0px;
+  border-bottom: 1px solid #fff;
+  text-align: center;
+}
+
+/* Ajuste responsivo */
+@media (max-width: 576px) {
+  .datos-container {
+    padding: 20px;
+  }
+
+  .datos-title {
+    font-size: 30px; /* Reducimos un poco en pantallas pequeñas */
+  }
+
+  .datos-subtitle {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,210 @@
+/* ============================
+   Estilos generales para la sección Industrias
+=============================== */
+.industrias {
+  text-align: center;
+  margin: 7rem 0rem 0rem;
+  background-color: #ffffff;
+}
+
+.industrias-titulo {
+  font-size: 40px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 500px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+.pIndustrias {
+  font-size: 16px;
+  color: #222;
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+/* ============================
+     Contenedor del carrusel
+     - Posición relativa para ubicar botones y efectos de degradado.
+     - overflow: hidden recorta el contenido extra.
+  =============================== */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============================
+     Pista del carrusel
+     - Se desplaza horizontalmente con transición.
+  =============================== */
+.carousel-track {
+  display: flex;
+}
+
+/* ============================
+     Estilos de cada card
+     - Tamaño fijo, espaciado entre cards y box-shadow sutil.
+  =============================== */
+.cardIndustrias {
+  width: 300px; /* Ancho de la card */
+  height: 350px; /* Altura de la card */
+  margin: 0 10px; /* Espaciado lateral: 10px a cada lado */
+  border-radius: 15px; /* Bordes redondeados */
+  background-size: cover;
+  background-position: center;
+  flex-shrink: 0;
+  /* Box-shadow sutil con color #c5c5c5 */
+  box-shadow: 0 4px 8px rgba(197, 197, 197, 0.5);
+  position: relative;
+}
+
+/* ============================
+     Overlay oscuro (opcional) en cada card para mejorar contraste
+     Puedes ajustar la opacidad del overlay modificando el valor en rgba.
+  =============================== */
+.cardIndustrias::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Cambia 0.3 para ajustar opacidad */
+  z-index: 1;
+  border-radius: 15px;
+}
+
+/* ============================
+     Título de la card (card-title-industrias)
+     - Fondo semitransparente, configurable con la variable de opacidad.
+     - Texto blanco, centrado y bold.
+  =============================== */
+.card-title-industrias {
+  background: rgba(
+    0,
+    0,
+    0,
+    var(--card-title-opacity, 0)
+  ); /* Ajusta opacidad modificando el valor 0.5 */
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 10px;
+  width: 100%;
+  text-align: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: absolute;
+  bottom: 0;
+  z-index: 2;
+  margin-bottom: 26px;
+}
+
+/* ============================
+     Imágenes de fondo para cada card
+  =============================== */
+.Eléctrica {
+  background-image: url("https://i.pinimg.com/736x/a2/27/ab/a227ab0073aa000fea07667036873405.jpg");
+}
+.Redes {
+  background-image: url("https://i.pinimg.com/736x/fa/71/38/fa7138c5e08d2b9d388b56313f52991e.jpg");
+}
+.Construcción {
+  background-image: url("https://i.pinimg.com/736x/8f/bf/a9/8fbfa90d55b7d830220c89be428ac157.jpg");
+}
+.Agroindustria {
+  background-image: url("https://images.pexels.com/photos/1459331/pexels-photo-1459331.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+}
+.Automatización {
+  background-image: url("https://i.pinimg.com/736x/fd/18/b2/fd18b2d0696c17a376d53c3b3e90852c.jpg");
+}
+.Seguridad {
+  background-image: url("https://i.pinimg.com/736x/42/3f/ba/423fba557438587bf43ee85c973e0739.jpg");
+}
+
+/* ============================
+     Botones de navegación
+     - Fondo transparente, color #222, ubicados en las laterales centrales.
+  =============================== */
+.carousel-btn {
+  background-color: transparent;
+  color: #222;
+  border: none;
+  padding: 10px 15px;
+  font-size: 2.5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  border-radius: 30px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* ============================
+     Degradados en los extremos
+     - Para simular que hay más cards entrando y saliendo.
+  =============================== */
+.carousel-container::before,
+.carousel-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 20px;
+  z-index: 5;
+}
+
+.carousel-container::before {
+  left: 0;
+  background: linear-gradient(
+    to right,
+    rgba(249, 249, 249, 1),
+    rgba(249, 249, 249, 0)
+  );
+}
+
+.carousel-container::after {
+  right: 0;
+  background: linear-gradient(
+    to left,
+    rgba(249, 249, 249, 1),
+    rgba(249, 249, 249, 0)
+  );
+}
+
+/* ============================
+     Responsividad: Ajuste para dispositivos móviles
+     - En pantallas menores a 480px se muestra solo una card a la vez.
+  =============================== */
+@media (max-width: 480px) {
+  .carousel-container {
+    max-width: 100%;
+  }
+  .cardIndustrias {
+    width: 90%; /* Ocupa la mayor parte del ancho disponible */
+    margin: 0 auto; /* Centrado horizontal */
+  }
+  /* Ajuste de la pista para que se desplace de a 1 card */
+  .carousel-track {
+    transition: transform 0.5s ease;
+  }
+}

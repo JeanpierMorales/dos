@@ -1,0 +1,243 @@
+/* Estilos generales */
+.nosotros {
+  text-align: center;
+  padding: 0px 20px;
+  background-color: #fff;
+  margin: 6rem 0rem 0rem;
+  padding: 0rem;
+}
+
+/* Título de la sección */
+.nosotros-titulo {
+  font-size: 40px;
+  margin-bottom: 10px;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  max-width: 500px;
+  margin: 0 auto; /* Centra el contenido horizontalmente */
+  text-align: center; /* Centra el texto dentro del elemento */
+}
+
+/* Subtítulo de la sección */
+.nosotros-subtitulo {
+  font-size: 16px;
+  color: #222;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Contenedor de las cards */
+.nosotros-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Estilo de cada card */
+.cardNosotros {
+  width: 300px;
+  height: 400px;
+  perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+}
+
+/* Contenedor interno de la card */
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s ease-in-out; /* Controla la velocidad de giro */
+  transform-style: preserve-3d; /* Mantiene el efecto 3D durante la transformación */
+  cursor: pointer;
+  border-radius: 15px;
+}
+
+/* Efecto de giro al pasar el cursor sobre la card */
+.cardNosotros:hover .card-inner {
+  transform: rotateY(180deg);
+  box-shadow: 0 14px 18px rgba(167, 163, 163, 0.5); /* Añade una sombra de borde de color c5c5c5 */
+}
+
+/* Estilo de la parte frontal y trasera de la card */
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Oculta la parte trasera cuando se ve la frontal y viceversa */
+  border-radius: 15px;
+  border: 1px solid #c5c5c5; /* Añade un borde sutil de color c5c5c5 */
+}
+
+/* Estilo de la parte frontal de la card */
+.card-front {
+  background-size: cover;
+  background-position: center;
+}
+
+/* Estilo de la parte trasera de la card */
+.card-back {
+  background-color: #c5c5c5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateY(180deg);
+  padding: 20px;
+}
+
+/* Estilo del texto dentro de la card */
+.card-text-Nosotros {
+  font-size: 16px;
+  color: #222;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+}
+
+/* Pseudo-elementos para Misión, Visión y Valores */
+.mision::before,
+.vision::before,
+.valores::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 10px;
+}
+
+/* Texto de Misión */
+.mision::after {
+  content: "Misión";
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+/* Texto de Visión */
+.vision::after {
+  content: "Visión";
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  margin-bottom: 2rem;
+}
+
+/* Texto de Valores */
+.valores::after {
+  content: "Valores";
+  position: absolute;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  margin-bottom: 2rem;
+  border-radius: 15px;
+}
+
+/* Imágenes específicas para cada card */
+.mision {
+  background-image: url("https://i.pinimg.com/736x/e8/2e/d0/e82ed0a803cbc6fc21db7f4897e17203.jpg");
+}
+.vision {
+  background-image: url("https://i.pinimg.com/736x/42/b7/e3/42b7e3e204ad93f3e39e7bd37b0bfb1f.jpg");
+}
+.valores {
+  background-image: url("https://i.pinimg.com/736x/42/3f/ba/423fba557438587bf43ee85c973e0739.jpg");
+}
+
+/* Responsividad */
+@media (max-width: 1200px) {
+  .nosotros-titulo {
+    font-size: 2rem;
+  }
+
+  .nosotros-subtitulo {
+    font-size: 1rem;
+  }
+
+  .cardNosotros {
+    width: 250px;
+  }
+
+  .card-img {
+    height: 220px;
+  }
+
+  .card-text-Nosotros {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .nosotros-titulo {
+    font-size: 1.8rem;
+  }
+
+  .nosotros-subtitulo {
+    font-size: 0.9rem;
+  }
+
+  .cardNosotros {
+    width: 200px;
+  }
+
+  .card-img {
+    height: 180px;
+  }
+
+  .card-text-Nosotros {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .nosotros-titulo {
+    font-size: 1.5rem;
+  }
+
+  .nosotros-subtitulo {
+    font-size: 0.8rem;
+  }
+
+  .cardNosotros {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .card-img {
+    height: 150px;
+  }
+
+  .card-text-Nosotros {
+    font-size: 0.7rem;
+  }
+}

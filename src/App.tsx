@@ -1,7 +1,12 @@
-import "./App.css";
+import React from "react";
+import Inicio from "./Components/Inicio";
 
-function App() {
-  return <></>;
-}
+const App: React.FC = () => {
+  return (
+    <div className="App">
+      <Inicio />
+    </div>
+  );
+};
 
 export default App;
